@@ -1,3 +1,5 @@
+include $(top_srcdir)/rules.mk
+
 AUTOMAKE_OPTIONS=subdir-objects
 SUBDIRS = . # python
 EXTRA_DIST=

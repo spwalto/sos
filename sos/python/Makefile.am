@@ -1,10 +1,14 @@
+include $(top_srcdir)/rules.mk
+
 CFLAGS := $(filter-out -Werror, ${CFLAGS})
 PY_INCLUDES = -I$(srcdir)/../include \
 	   -I$(top_srcdir)/rpc \
 	   -I$(srcdir)/../src \
 	   -I$(top_srcdir)/ods/include \
 	   -I$(NUMPY_INCLUDE_PATH) \
-	   -D "NPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION"
+	   -DNPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION
+
+if ENABLE_PYTHON
 
 pkgpyexec_LTLIBRARIES = Sos.la
 
@@ -18,8 +22,6 @@ pkgpyexecdir = $(pkgpythondir)
 
 pkgpython_PYTHON = __init__.py DataSet.py
 
-dist_bin_SCRIPTS = sos-db sos-part sos-schema sos-import-csv sos-monitor sos-index
-
 Sos.c: Sos.pyx Sos.pxd
 	echo PYTHON_LDFLAGS are "$(PYTHON_LDFLAGS)"
 	cython -3 --gdb --directive language_level=3 $< -o $@
@@ -27,4 +29,7 @@ Sos.c: Sos.pyx Sos.pxd
 clean-local:
 	rm -f Sos.c
 
+endif
+
+dist_bin_SCRIPTS = sos-db sos-part sos-schema sos-import-csv sos-monitor sos-index
 dist_man8_MANS= sos-index.man sos-part.man sos-import-csv.man sos-schema.man sos-monitor.man
