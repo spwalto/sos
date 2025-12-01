@@ -5,10 +5,12 @@ on:
     paths:
       - '**/*.rst'           # Trigger for any .rst or doc related changes
       - 'docs/**'
+      - 'conf.py'
   pull_request:
     paths:
       - '**/*.rst'           # Same triggers for pull requests
       - 'docs/**'
+      - 'conf.py'
 
 jobs:
   build-docs:
