@@ -19,3 +19,4 @@ sosapi_svc.c
 sosapi_xdr.c
 \#*
 .#*
+*.man
