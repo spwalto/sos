@@ -27,29 +27,29 @@ rst_man_dir = Path(__file__).parent / 'rst_man'
 for subdir in ['rpc', 'sos']:
     dir_path = project_root / subdir
     if dir_path.exists():
-    for root, _, files in os.walk(str(dir_path)):
-        for file in files:
-            if file.endswith('.rst'):
-                # Source file
-                source = Path(root) / file
+        for root, _, files in os.walk(str(dir_path)):
+            for file in files:
+                if file.endswith('.rst'):
+                    # Source file
+                    source = Path(root) / file
 
-                # Create relative path structure in rst_man
-                rel_path = Path(root).relative_to(dir_path)
-                target_dir = rst_man_dir / rel_path
-                os.makedirs(target_dir, exist_ok=True)
+                    # Create relative path structure in rst_man
+                    rel_path = Path(root).relative_to(dir_path)
+                    target_dir = rst_man_dir / rel_path
+                    os.makedirs(target_dir, exist_ok=True)
 
-                # Create target path
-                target = target_dir / file
+                    # Create target path
+                    target = target_dir / file
 
-                # Create symlink if it doesn't exist
-                if not target.exists():
-                    # Use relative path for symlink
-                    rel_source = os.path.relpath(source, target.parent)
-                    try:
-                        os.symlink(rel_source, target)
-                    except OSError:
-                        # If symlink fails, copy the file
-                        shutil.copy2(source, target)
+                    # Create symlink if it doesn't exist
+                    if not target.exists():
+                        # Use relative path for symlink
+                        rel_source = os.path.relpath(source, target.parent)
+                        try:
+                            os.symlink(rel_source, target)
+                        except OSError:
+                            # If symlink fails, copy the file
+                            shutil.copy2(source, target)
 
 # -- General configuration
 
