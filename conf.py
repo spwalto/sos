@@ -37,10 +37,10 @@ for subdir in ['rpc', 'sos']:
                     rel_path = Path(root).relative_to(dir_path)
                     target_dir = rst_man_dir / rel_path
                     os.makedirs(target_dir, exist_ok=True)
-                    
+
                     # Create target path
                     target = target_dir / file
-                    
+
                     # Create symlink if it doesn't exist
                     if not target.exists():
                         rel_source = os.path.relpath(source, target.parent)
