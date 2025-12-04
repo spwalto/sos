@@ -23,19 +23,18 @@ project_root = Path(__file__).parent.parent
 # This ensures files exist before Sphinx processes toctree directives
 rst_man_dir = Path(__file__).parent / 'rst_man'
 
-# Find all .rst files in the ldms/ directory
-ldms_dir = project_root / 'ldms'
+# Find all .rst files in the rpc and sos directories
 for subdir in ['rpc', 'sos']:
     dir_path = project_root / subdir
     if dir_path.exists():
-        for root, _, files in os.walk(str(ldms_dir)):
+        for root, _, files in os.walk(str(dir_path)):
             for file in files:
                 if file.endswith('.rst'):
                     # Source file
                     source = Path(root) / file
 
                     # Create relative path structure in rst_man
-                    rel_path = Path(root).relative_to(ldms_dir)
+                    rel_path = Path(root).relative_to(dir_path)
                     target_dir = rst_man_dir / rel_path
                     os.makedirs(target_dir, exist_ok=True)
                     
