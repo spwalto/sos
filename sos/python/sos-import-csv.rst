@@ -32,31 +32,31 @@ attribute values are obtained from columns in the CSV file.
 OPTIONS
 =======
 
-**\-\-path** *SOS-PATH*
+\-\-path SOS-PATH
    | 
    | Specifies the path to the SOS container. The container must already
      exist.
 
-**\-\-schema** *SCHEMA*
+\-\-schema SCHEMA
    | 
    | The name of the SOS schema used to create objects. The schema must
      exist in the container.
 
-**\-\-csv** *CSV-FILE*
+\-\-csv CSV-FILE
    | 
    | The path to the CSV text file containing the data to import.
 
-**\-\-map** *MAP-FILE*
+\-\-map MAP-FILE
    | 
    | The path to a JSON formatted text file specifying how columns in
      the CSV file map to attributes in the object schema.
 
-**\-\-sep** *SEP-STR*
+\-\-sep SEP-STR
    | 
    | A string specifying the characters that will be interpretted as
      column separators. By default this is a comma (",").
 
-**\-\-status**
+\-\-status
    | 
    | If the *status* option is present, import progress status will be
      provided as the CSV file is processed.

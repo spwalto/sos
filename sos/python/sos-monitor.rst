@@ -27,13 +27,13 @@ key will cause the application to exit.
 OPTIONS
 =======
 
-**\-\-path PATH**
+--path PATH
    Specifies the *PATH* to the container.
 
-**\-\-schema NAME**
+--schema NAME
    Specifies the schema *NAME* to monitor.
 
-**\-\-refresh INT**
+--refresh INT
    Specifies that the window is updated every *INT* seconds. The default
    interval is 1 second.
 
