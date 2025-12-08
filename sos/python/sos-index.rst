@@ -27,13 +27,13 @@ indices.
 Query
 -----
 
-The -Q option will print the index name for all indices in the
+The **-Q** option will print the index name for all indices in the
 container.
 
 Add
 ---
 
-The -A option will add an index for an attribute in a schema. The index
+The **-A** option will add an index for an attribute in a schema. The index
 may already exist; if it does not it will be created.
 
 Clients that share the container become aware of the new index (based on
@@ -42,12 +42,12 @@ a schema generation number), and begin adding objects to the index.
 Remove
 ------
 
-The -R option will remove an index for a schema attribute. Clients that
+The **-R** option will remove an index for a schema attribute. Clients that
 share the container become aware of the index removal (based on a schema
 generation number), and cease adding objects to the index.
 
-The -R option does not remove the index files themselves; the index can
-be added back with the -A option and will contain all objects indexed
+The **-R** option does not remove the index files themselves; the index can
+be added back with the **-A** option and will contain all objects indexed
 prior to index removal.
 
 Verify
@@ -56,40 +56,40 @@ Verify
 When verifying an index, if corruption is detected, the name of the
 partition containing the corrupted index is printed. It is also possible
 to have the underlying index library print specific consistency errors.
-This is enabled with the --verbose option.
+This is enabled with the **\-\-verbose** option.
 
 OPTIONS
 =======
 
--Q,--query
+-Q,\-\-query
    Print the name of all indices in the container.
 
-Add an index to the schema specified by the -s option for the attribute
-specified by the -a option.
+Add an index to the schema specified by the **-s** option for the attribute
+specified by the **-a** option.
 
-Remove an index from the schema specified by the -s option for the
-attribute specified by the -a option.
+Remove an index from the schema specified by the **-s** option for the
+attribute specified by the **-a** option.
 
--V,--verify
+-V,\-\-verify
    Verify the consistency of one or more indices in a container. This
    includes all index instances in all partitions attached to the
-   container. If the --index NAME option is specified, only the index
+   container. If the **\-\-index** NAME option is specified, only the index
    NAME will be verified.
 
--p,--path PATH 
+-p,\-\-path PATH 
    The **PATH** to the SOS container.
 
--n,--index NAME 
+-n,\-\-index NAME 
    The optional **NAME** of the index to verify. If not specified, all
    indices will be verified.
 
--s,--schema NAME
-   The schema **NAME**, required with the -A and -R options.
+-s,\-\-schema NAME
+   The schema **NAME**, required with the **-A** and **-R** options.
 
--a,--attr NAME
-   The attribute **NAME** to index, required with the -A and -R options.
+-a,\-\-attr NAME
+   The attribute **NAME** to index, required with the **-A** and **-R** options.
 
--v,--verbose 
+-v,\-\-verbose 
    This option can be used with the -V option to control the level of
    error messages printed when a corruption error is detected. If
    specified once, the partition name containing the corrupted index is

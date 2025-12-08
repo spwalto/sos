@@ -34,19 +34,19 @@ Querying Partitions
 -------------------
 
 The set of partitions that are attached to a container may be queried
-with the --query when combined with the --cont option. If the --cont
-option is not specified, the --query must include the --path option to
+with the **\-\-query** when combined with the **\-\-cont option**. If the **\-\-cont**
+option is not specified, the **\-\-query** must include the **\-\-path** option to
 specify the filesystem path to the partition.
 
---fmt
+**\-\-fmt**
    Specifies the desired output format of the query data: *json* or
    *table* (default).
 
 Creating Partitions
 -------------------
 
-Partitions are created with the --create option. After creation, the
-partition exists, but is not part of any container. The --attach option
+Partitions are created with the **\-\-create** option. After creation, the
+partition exists, but is not part of any container. The **\-\-attach** option
 is used to *attach* the partition to one or more containers.
 
 A container maintains a *state* that informs the container about how the
@@ -63,19 +63,19 @@ A partition in the *OFFLINE* state is present in the container but
 cannot be the target of object insertion and is not included in object
 queries.
 
---mode MODE
+**\-\-mode MODE**
    Specifies the **OCTAL** parmission bits to apply for partition
    access. See the open(3) system call for a description of these bits.
 
---user NAME
+**\-\-user NAME**
    Specifies the user **USER** that owns the partition. This **USER**
    must exist on the system.
 
---group NAME
+**\-\-group NAME**
    Specifies the group **GROUP** that owns the partition. This **GROUP**
    must exist on the system.
 
---desc DESC
+**\-\-desc DESC**
    Specifies a description string that will be used to annotate the
    partition. The value does not affect the behavior of the partition
    but is intended to provided administrators information on the
@@ -84,19 +84,19 @@ queries.
 Attaching Partitions
 --------------------
 
-Partitions are attached to a container with the --attach option. The
-initial state of the partition is *OFFLINE*. See the --state option for
+Partitions are attached to a container with the **\-\-attach** option. The
+initial state of the partition is *OFFLINE*. See the **\-\-state** option for
 instruction on how to make the new partition *ACTIVE* or *PRIMARY*.
 
---attach
+**\-\-attach**
    Requests that a partition be attached to a container. The initial
    state of the partition is *OFFLINE*.
 
---cont PATH
+**\-\-cont PATH**
    Specifies the **PATH** to the container to which the partition will
    be attached.
 
---path PATH
+**\-\-path PATH**
    Specifies the **PATH** to the partition to attach.
 
 Setting Partition State
@@ -105,14 +105,14 @@ Setting Partition State
 Set the state of a partitions in a container to ono of *PRIMARY*,
 *ACTIVE*, or *OFFLINE*.
 
---state STATE-NAME
+**\-\-state STATE-NAME**
    Specifies the state for the partition in the container. The
    **STATE-NAME** is one of *PRIMARY*, *ACTIVE*, or *OFFLINE*.
 
---cont PATH
+**\-\-cont PATH**
    Specifies the **PATH** to the container containing the partition.
 
---name PART-NAME
+**\-\-name PART-NAME**
    Specifies the **PART-NAME** in the container that refers to the
    partition.
 
@@ -125,27 +125,27 @@ files or any data from the partition.
 
 The *PRIMARY* partition in a container cannot be removed.
 
---detach
+**\-\-detach**
    Requests that a partition be detached from a container.
 
---cont PATH
+**\-\-cont PATH**
    Specifies the **PATH** to the container from which the partition will
    be removed.
 
---name PART-NAME
+**\-\-name PART-NAME**
    Specifies the partition name to detach from the container.
 
---set
+**\-\-set**
 
---remap-schema
+**\-\-remap-schema**
 
---show-schema
+**\-\-show-schema**
 
---reindex
+**\-\-reindex**
 
---reindex-status-count
+**\-\-reindex-status-count**
 
---verbose
+**\-\-verbose**
 
 EXAMPLES
 ========
@@ -166,7 +166,7 @@ Query Example
 Verify A Partition
 ------------------
 
-The --verify parameter does a quick evaluation of all of the ODS
+The **\-\-verify** parameter does a quick evaluation of all of the ODS
 containers in a partition to determine if they are valid by examining a
 *signature* that exists in the first 8B of every ODS container. This
 *signature* must match the expected value or the file is reported as

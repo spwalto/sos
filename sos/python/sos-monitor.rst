@@ -15,7 +15,7 @@ Show Index Insert Data for a Schema
 SYNOPSIS
 ========
 
-sos-monitor --path PATH --schema NAME [--refresh INT]
+sos-monitor \-\-path PATH \-\-schema NAME [\-\-refresh INT]
 
 DESCRIPTION
 ===========
@@ -27,13 +27,13 @@ key will cause the application to exit.
 OPTIONS
 =======
 
---path PATH
+**\-\-path PATH**
    Specifies the *PATH* to the container.
 
---schema NAME
+**\-\-schema NAME**
    Specifies the schema *NAME* to monitor.
 
---refresh INT
+**\-\-refresh INT**
    Specifies that the window is updated every *INT* seconds. The default
    interval is 1 second.
 

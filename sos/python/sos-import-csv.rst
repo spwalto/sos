@@ -46,17 +46,17 @@ OPTIONS
    | 
    | The path to the CSV text file containing the data to import.
 
-**--map** *MAP-FILE*
+**\-\-map** *MAP-FILE*
    | 
    | The path to a JSON formatted text file specifying how columns in
      the CSV file map to attributes in the object schema.
 
-**--sep** *SEP-STR*
+**\-\-sep** *SEP-STR*
    | 
    | A string specifying the characters that will be interpretted as
      column separators. By default this is a comma (",").
 
-**--status**
+**\-\-status**
    | 
    | If the *status* option is present, import progress status will be
      provided as the CSV file is processed.
@@ -67,7 +67,7 @@ CSV file format
 The CSV text file must contain newline terminated lines of text. Each
 line may contain multiple columns separated by the *separator*
 character. By default, the character separating each column is a comma,
-however, this can be overriden with the **--sep** command line option.
+however, this can be overriden with the **\-\-sep** command line option.
 
 Map File Format
 ===============
