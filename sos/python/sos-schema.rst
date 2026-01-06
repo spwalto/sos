@@ -77,19 +77,19 @@ OPTIONS
 \-\-path PATH
    Specifies the **PATH** to the container.
 
-**\-\-query**
+**--query**
    Query the schema defined in the container. Use with the **\-\-verbose**
    option to provide detail information for each schema.
 
-**\-\-add PATH**
+--add PATH
    Adds a single schema defined in the *template file PATH* to the
    container.
 
-**\-\-export PATH**
+**--export PATH**
    Export all schema defined in the container to a multi-schema
    *template* file at **PATH**.
 
-**\-\-import PATH**
+--import PATH**
    Add all schema defined in multi-schema *template* file at **PATH** to
    the container.
 

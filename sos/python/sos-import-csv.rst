@@ -1,4 +1,4 @@
-. _sos-import-csv:
+.. _sos-import-csv:
 
 ==============
 sos-import-csv
@@ -16,15 +16,15 @@ Import data from a comma-separated text file into a SOS Container
 SYNOPSIS
 ========
 
-sos-import-csv --path SOS-PATH --csv CSV-FILE--schema SCHEMA-FILE --map
-MAP-FILE [ --sep SEP-STR --status ]
+sos-import-csv \-\-path SOS-PATH \-\-csv CSV-FILE \-\-schema SCHEMA-FILE \-\-map
+MAP-FILE [ \-\-sep SEP-STR \-\-status ]
 
 DESCRIPTION
 ===========
 
 The **sos-import-csv** commannd parses CSV text data and imports this
 data into a SOS container. There are three files read by the
-**sos-import-csv command: the CSV text file containing the data to**
+**sos-import-csv** command: the CSV text file containing the data to
 import, a *schema-file* that defines the type of object created for each
 line of the CSV text file, and a *map-file* that specifies how object
 attribute values are obtained from columns in the CSV file.

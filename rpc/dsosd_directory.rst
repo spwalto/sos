@@ -73,10 +73,12 @@ ENVIRONMENT
 
 The following environment variables may be used to affect the configuration of the dsosd daemon.
 
-DSOSD_DIRECTORY The path to a JSON formatted file that maps container
+DSOSD_DIRECTORY 
+   The path to a JSON formatted file that maps container
    names to local filesystem paths.
 
-DSOSD_SERVER_ID A logical name for this dsosd instance. If not
+DSOSD_SERVER_ID 
+   A logical name for this dsosd instance. If not
    specified, the hostname (as determined by gethostname) will be used.
    This name is used to determine which sections of the directory file
    apply to this dsosd instance.

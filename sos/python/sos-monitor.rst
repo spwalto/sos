@@ -1,3 +1,4 @@
+.. _sos-monitor:
 
 ===========
 sos-monitor
