@@ -74,10 +74,10 @@ A template may also contain multiple schema definitions.
 OPTIONS
 =======
 
-\-\-path PATH
+--path PATH
    Specifies the **PATH** to the container.
 
-**--query**
+\-\-query
    Query the schema defined in the container. Use with the **\-\-verbose**
    option to provide detail information for each schema.
 
@@ -85,23 +85,23 @@ OPTIONS
    Adds a single schema defined in the *template file PATH* to the
    container.
 
-**--export PATH**
+--export PATH
    Export all schema defined in the container to a multi-schema
    *template* file at **PATH**.
 
---import PATH**
+--import PATH
    Add all schema defined in multi-schema *template* file at **PATH** to
    the container.
 
-**\-\-verbase**
+\-\-verbose
    When querying schema provide detail information of the schema
    contents. Absent this option, only the schema name are printed.
 
-**\-\-schema NAME**
+--schema NAME
    Used with the **\-\-query** option to print information only for the schema
    *NAME*.
 
-**\-\-uuid UUID**
+--uuid UUID
    Used with the **\-\-query** option to print information only for the schema
    with the Universally Unique ID *UUID*.
 

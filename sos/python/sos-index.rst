@@ -70,20 +70,20 @@ specified by the **-a** option.
 Remove an index from the schema specified by the **-s** option for the
 attribute specified by the **-a** option.
 
--V,\-\-verify
+-V,--verify
    Verify the consistency of one or more indices in a container. This
    includes all index instances in all partitions attached to the
    container. If the **\-\-index** NAME option is specified, only the index
    NAME will be verified.
 
--p,\-\-path PATH 
+-p,--path PATH 
    The **PATH** to the SOS container.
 
--n,\-\-index NAME 
+-n,--index NAME 
    The optional **NAME** of the index to verify. If not specified, all
    indices will be verified.
 
--s,\-\-schema NAME
+-s,--schema NAME
    The schema **NAME**, required with the **-A** and **-R** options.
 
 -a,\-\-attr NAME

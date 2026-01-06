@@ -135,9 +135,9 @@ The *PRIMARY* partition in a container cannot be removed.
 --name PART-NAME
    Specifies the partition name to detach from the container.
 
---set
+\-\-set
 
---remap-schema
+\-\-remap-schema
 
 \-\-show-schema
 
